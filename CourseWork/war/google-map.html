@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<title>Google Map</title>
+<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link
+	href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic-ext'
+	rel='stylesheet' type='text/css'>
+<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+	function initialize() {
+		var mapOptions = {
+			zoom : 2,
+			center : new google.maps.LatLng(25, 0),
+			backgroundColor : "#292929",
+			styles : [ {
+				"featureType" : "all",
+				"elementType" : "labels.text.fill",
+				"stylers" : [ {
+					"saturation" : 36
+				}, {
+					"color" : "#ffffff"
+				}, {
+					"lightness" : 40
+				} ]
+			}, {
+				"featureType" : "all",
+				"elementType" : "labels.text.stroke",
+				"stylers" : [ {
+					"visibility" : "on"
+				}, {
+					"color" : "#000000"
+				}, {
+					"lightness" : 16
+				} ]
+			}, {
+				"featureType" : "all",
+				"elementType" : "labels.icon",
+				"stylers" : [ {
+					"visibility" : "off"
+				} ]
+			}, {
+				"featureType" : "administrative",
+				"elementType" : "geometry.fill",
+				"stylers" : [ {
+					"color" : "#000000"
+				}, {
+					"lightness" : 20
+				} ]
+			}, {
+				"featureType" : "administrative",
+				"elementType" : "geometry.stroke",
+				"stylers" : [ {
+					"color" : "#000000"
+				}, {
+					"lightness" : 17
+				}, {
+					"weight" : 1.2
+				} ]
+			}, {
+				"featureType" : "landscape",
+				"elementType" : "geometry",
+				"stylers" : [ {
+					"color" : "#b88b58"
+				} ]
+			}, {
+				"featureType" : "poi",
+				"elementType" : "geometry",
+				"stylers" : [ {
+					"color" : "#000000"
+				}, {
+					"lightness" : 21
+				} ]
+			}, {
+				"featureType" : "road.highway",
+				"elementType" : "geometry.fill",
+				"stylers" : [ {
+					"color" : "#000000"
+				}, {
+					"lightness" : 17
+				} ]
+			}, {
+				"featureType" : "road.highway",
+				"elementType" : "geometry.stroke",
+				"stylers" : [ {
+					"color" : "#000000"
+				}, {
+					"lightness" : 29
+				}, {
+					"weight" : 0.2
+				} ]
+			}, {
+				"featureType" : "road.arterial",
+				"elementType" : "geometry",
+				"stylers" : [ {
+					"color" : "#000000"
+				}, {
+					"lightness" : 18
+				} ]
+			}, {
+				"featureType" : "road.local",
+				"elementType" : "geometry",
+				"stylers" : [ {
+					"color" : "#000000"
+				}, {
+					"lightness" : 16
+				} ]
+			}, {
+				"featureType" : "transit",
+				"elementType" : "geometry",
+				"stylers" : [ {
+					"color" : "#000000"
+				}, {
+					"lightness" : 19
+				} ]
+			}, {
+				"featureType" : "water",
+				"elementType" : "geometry",
+				"stylers" : [ {
+					"color" : "#292929"
+				} ]
+			} ]
+
+		};
+		map = new google.maps.Map(document.getElementById('map-canvas'),
+				mapOptions);
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+<body>
+	<header>
+		<div id="userpick">
+			<a href="index.html"><img src="images/userpick.jpg"></a>
+		</div>
+		<div id="userinfo">
+			<h2>Житков Константин Дмитриевич</h2>
+			<p>ФКТиУ, ПБКС</p>
+			<p>
+				<a href="mailto:zhitkovkostya@gmail.com">zhitkovkostya@gmail.com</a>
+			</p>
+		</div>
+	</header>
+	<div class="flex-container">
+		<div class="webapp" id="map-canvas" style="width: 100%;"></div>
+	</div>
+
+</body>
+</html>

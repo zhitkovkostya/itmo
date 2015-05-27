@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<title>Массивы. Циклы. Типы данных</title>
+<meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
+<link href="reset.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style.css">
+<link
+	href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic-ext'
+	rel='stylesheet' type='text/css'>
+</head>
+
+<script src="jquery-2.1.0.min.js"></script>
+<script>
+	$(function() {
+		$('#show1').click(
+				function() {
+					var var1 = $('#var1').val();
+					var var2 = $('#var2').val();
+
+					$('#result1').load(
+							"/ClosestNumber?var1=" + var1 + "&var2=" + var2);
+				});
+		$('#show2').click(
+				function() {
+					var var1 = $('#var3').val();
+					var var2 = $('#var4').val();
+					var var3 = $('#var5').val();
+
+					$('#result2').load(
+							"/QuadraticEquation?var1=" + var1 + "&var2=" + var2
+									+ "&var3=" + var3);
+				});
+		$('#show3').click(function() {
+			$('#result3').load("/RandomArray?flag=1	");
+		});
+		$('#hide3').click(function() {
+			$('#result3').load("/RandomArray?flag=0	");
+		});
+		$('#show4').click(function() {
+			$('#result4').load("/RandomArrayMax?flag=1	");
+		});
+		$('#hide4').click(function() {
+			$('#result4').load("/RandomArrayMax?flag=0	");
+		});
+	});
+</script>
+
+
+<body>
+	<header>
+		<div id="userpick">
+			<a href="index.html"><img src="images/userpick.jpg"></a>
+		</div>
+		<div id="userinfo">
+			<h2>Житков Константин Дмитриевич</h2>
+			<p>ФКТиУ, ПБКС</p>
+			<p>
+				<a href="mailto:zhitkovkostya@gmail.com">zhitkovkostya@gmail.com</a>
+			</p>
+
+		</div>
+	</header>
+	<div class="flex-container">
+		<div class="webapp" style="width: 100%;">
+			<h1>Вычисление числа, ближайшего к 10</h1>
+			<form>
+				<input id="var1" type="text" /> <input id="var2" type="text" />
+			</form>
+			<button id="show1">Готово</button>
+			<span id="result1"></span>
+		</div>
+		<div class="webapp" style="width: 100%;">
+			<h1>Решение квадратных уравнений</h1>
+			<form>
+				<input id="var3" type="text" /> · x<sup>2</sup> + <input id="var4"
+					type="text" /> · x + <input id="var5" type="text" />
+			</form>
+			<button id="show2">Посчитать</button>
+			<span id="result2" style="text-align: left;"></span>
+		</div>
+		<div class="webapp" style="width: 100%;">
+			<h1>Создание двумерного массива</h1>
+			<button id="show3">Показать</button>
+			<button id="hide3">Скрыть</button>
+			<span id="result3"></span>
+		</div>
+		<div class="webapp" style="width: 100%;">
+			<h1>Создание двумерного массива и поиск максимума</h1>
+			<button id="show4">Показать</button>
+			<button id="hide4">Скрыть</button>
+			<span id="result4"></span>
+		</div>
+	</div>
+
+</body>
+</html>

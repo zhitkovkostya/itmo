@@ -40,6 +40,10 @@
 		<servlet-name>Room</servlet-name>
 		<servlet-class>com.Room</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>Exceptions</servlet-name>
+		<servlet-class>com.Exceptions</servlet-class>
+	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>ClosestNumber</servlet-name>
@@ -69,17 +73,21 @@
 		<servlet-name>Booking</servlet-name>
 		<url-pattern>/Booking</url-pattern>
 	</servlet-mapping>
-		<servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>City</servlet-name>
 		<url-pattern>/City</url-pattern>
 	</servlet-mapping>
-		<servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>Hotel</servlet-name>
 		<url-pattern>/Hotel</url-pattern>
 	</servlet-mapping>
-		<servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>Room</servlet-name>
 		<url-pattern>/Room</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Exceptions</servlet-name>
+		<url-pattern>/Exceptions</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>

@@ -4,7 +4,7 @@ import java.io.IOException;
 import javax.servlet.http.*;
 
 @SuppressWarnings("serial")
-public class ClosestNumber extends HttpServlet {
+public class ClosestNumberServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
@@ -20,14 +20,14 @@ public class ClosestNumber extends HttpServlet {
 		if (Math.abs(numToCompare - num1) != Math.abs(numToCompare - num2)) {
 			if (Math.abs(numToCompare - num1) < Math.abs(numToCompare - num2)) {
 				resp.getWriter().println(
-						Double.toString(num1) + " áëèæå ê " + numToCompare + ", ÷åì " + Double.toString(num2));
+						Double.toString(num1) + " Ð±Ð»Ð¸Ð¶Ðµ Ðº " + numToCompare + ", Ñ‡ÐµÐ¼ " + Double.toString(num2));
 			} else
 				resp.getWriter().println(
-						Double.toString(num2) + " áëèæå ê " + numToCompare + ", ÷åì " + Double.toString(num1));
+						Double.toString(num2) + " Ð±Ð»Ð¸Ð¶Ðµ Ðº " + numToCompare + ", Ñ‡ÐµÐ¼ " + Double.toString(num1));
 		} else {
 			resp.getWriter()
 					.println(
-							Double.toString(num1) + " è " + Double.toString(num2) + " îäèíàêîâî áëèçêè ê "
+							Double.toString(num1) + " Ð¸ " + Double.toString(num2) + " Ð¾Ð´Ð¸Ð½Ð°ÐºÐ¾Ð²Ð¾ Ð±Ð»Ð¸Ð·ÐºÐ¸ Ðº "
 									+ numToCompare);
 		}
 

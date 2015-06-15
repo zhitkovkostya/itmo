@@ -6,13 +6,14 @@ import java.text.SimpleDateFormat;
 
 import javax.servlet.http.*;
 
+import cla.TaskClass;
 import exc.StringException;
 import exc.NumberException;
 import exc.DateException;
 import exc.SubStringException;
 
 @SuppressWarnings("serial")
-public class Exceptions extends HttpServlet {
+public class ExceptionsServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
@@ -21,7 +22,7 @@ public class Exceptions extends HttpServlet {
 			String enteredString = req.getParameter("var1");
 			try {
 				checkNumber(enteredString);
-				resp.getWriter().print("Это действительно чило");
+				resp.getWriter().print("Р­С‚Рѕ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С‡РёСЃР»Рѕ.");
 			} catch (NumberException e) {
 				resp.getWriter().print(e);
 			}
@@ -29,25 +30,25 @@ public class Exceptions extends HttpServlet {
 			String enteredString = req.getParameter("var1");
 			try {
 				checkDate(enteredString);
-				resp.getWriter().print("Это действительно дата");
+				resp.getWriter().print("Р­С‚Рѕ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ РґР°С‚Р°.");
 			} catch (DateException e) {
 				resp.getWriter().print(e);
 			}
 		} else if (req.getParameter("task").equals("3")) {
-			Task substr = new Task(String.valueOf(Math.PI));
+			TaskClass substr = new TaskClass(String.valueOf(Math.PI));
 			String enteredString = req.getParameter("var1");
 			try {
 				checkSubString(substr.getAnswer(), enteredString);
-				resp.getWriter().print("В PI присутствует введенная комбинация цифр");
+				resp.getWriter().print("Р’ PI РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ РґР°РЅРЅР°СЏ РєРѕРјР±РёРЅР°С†РёСЏ С†РёС„СЂ.");
 			} catch (SubStringException e) {
 				resp.getWriter().print(e);
 			}
 		} else if (req.getParameter("task").equals("4")) {
-			Task captcha = new Task("CaPtChA");
+			TaskClass captcha = new TaskClass("CaPtChA");
 			String enteredString = req.getParameter("var1");
 			try {
 				checkString(enteredString, captcha.getAnswer());
-				resp.getWriter().print("Это действительно капча");
+				resp.getWriter().print("Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ!");
 			} catch (StringException e) {
 				resp.getWriter().print(e);
 			}
@@ -59,7 +60,7 @@ public class Exceptions extends HttpServlet {
 		try {
 			double d = Double.parseDouble(str);
 		} catch (NumberFormatException eDef) {
-			NumberException e = new NumberException("Это не число");
+			NumberException e = new NumberException("Р­С‚Рѕ РЅРµ С‡РёСЃР»Рѕ.");
 			throw e;
 		}
 	}
@@ -70,7 +71,7 @@ public class Exceptions extends HttpServlet {
 		try {
 			dateFormat.parse(str.trim());
 		} catch (ParseException eDef) {
-			DateException e = new DateException("Это не дата");
+			DateException e = new DateException("Р­С‚Рѕ РЅРµ РґР°С‚Р°.");
 			throw e;
 		}
 	}
@@ -78,7 +79,7 @@ public class Exceptions extends HttpServlet {
 	static void checkString(String str, String ans) throws StringException {
 		if (!(str.equals(ans))) {
 			StringException e = new StringException(
-					"Не правильно. Повторите попытку");
+					"РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ.");
 			throw e;
 		}
 	}
@@ -86,7 +87,7 @@ public class Exceptions extends HttpServlet {
 	static void checkSubString(String str, String substr)
 			throws SubStringException {
 		if (!(str.contains(substr))) {
-			SubStringException e = new SubStringException("В PI введенная комбинация цифр отсутствует");
+			SubStringException e = new SubStringException("Р’ PI РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РґР°РЅРЅР°СЏ РєРѕРјР±РёРЅР°С†РёСЏ С†РёС„СЂ.");
 			throw e;
 		}
 	}

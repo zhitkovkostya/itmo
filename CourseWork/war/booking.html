@@ -3,19 +3,18 @@
 <title>Классы. Бронирование номера в отеле.</title>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<link href="reset.css" rel="stylesheet" type="text/css">
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <link
 	href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic-ext'
 	rel='stylesheet' type='text/css'>
-<script src="jquery-2.1.0.min.js"></script>
+<script src="js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 	function city(id) {
 		id = parseInt(id);
 		$('#result1').load("/Booking?flag=1&city=" + id);
 	}
 </script>
-
 <script>
 	$(function() {
 		$('#hide1').click(function() {
@@ -27,7 +26,7 @@
 <body>
 	<header>
 		<div id="userpick">
-			<a href="index.html"><img src="images/userpick.jpg"></a>
+			<a href="index.html"><img src="img/userpick.jpg"></a>
 		</div>
 		<div id="userinfo">
 			<h2>Житков Константин Дмитриевич</h2>
@@ -51,6 +50,5 @@
 			<span id="result1"></span>
 		</div>
 	</div>
-
 </body>
 </html>

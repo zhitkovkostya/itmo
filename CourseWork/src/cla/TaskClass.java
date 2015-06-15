@@ -1,9 +1,9 @@
-package com;
+package cla;
 
-public class Task {
+public class TaskClass {
 	private String answer;
 	
-	public Task(String answer) {
+	public TaskClass(String answer) {
 		this.answer = answer;
 	}
 	

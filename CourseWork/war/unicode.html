@@ -1,14 +1,14 @@
 <html>
 <head>
-<title>Таблица символов Unicode</title>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<title>Таблица символов Unicode</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<link href="reset.css" rel="stylesheet" type="text/css">
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <link
 	href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic-ext'
 	rel='stylesheet' type='text/css'>
-<script src="jquery-2.1.0.min.js"></script>
+<script src="js/jquery-2.1.0.min.js"></script>
 <script>
 	$(function() {
 		$('#show1').click(
@@ -29,11 +29,11 @@
 					var var4 = $('#var4').val();
 
 					$('#result2').load(
-							"/UnicodeSymbolsExt?var3=" + var3 + "&var4=" + var4
+							"/UnicodeSymbolsPlus?var3=" + var3 + "&var4=" + var4
 									+ "&flag=" + 1);
 				});
 		$('#hide2').click(function() {
-			$('#result2').load("/UnicodeSymbolsExt?flag=0");
+			$('#result2').load("/UnicodeSymbolsPlus?flag=0");
 		});
 	});
 </script>
@@ -41,7 +41,7 @@
 <body>
 	<header>
 		<div id="userpick">
-			<a href="index.html"><img src="images/userpick.jpg"></a>
+			<a href="index.html"><img src="img/userpick.jpg"></a>
 		</div>
 		<div id="userinfo">
 			<h2>Житков Константин Дмитриевич</h2>
@@ -58,7 +58,6 @@
 			<form>
 				<input id="var1" type="text" /> <input id="var2" type="text" />
 			</form>
-
 			<button id="show1">Готово</button>
 			<button id="hide1">Скрыть</button>
 			<span id="result1"></span>
@@ -73,6 +72,5 @@
 			<span id="result2"></span>
 		</div>
 	</div>
-
 </body>
 </html>

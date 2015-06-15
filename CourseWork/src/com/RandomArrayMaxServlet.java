@@ -6,18 +6,18 @@ import java.util.Random;
 import javax.servlet.http.*;
 
 @SuppressWarnings("serial")
-public class RandomArray extends HttpServlet {
+public class RandomArrayMaxServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		resp.setContentType("text/html; charset=cp1251");
 		if (req.getParameter("flag").equals("1")) {
 			Random rand = new Random();
-			int rows = 8;
-			int cols = 5;
+			int rows = 5;
+			int cols = 8;
 
 			int max = 99;
-			int min = 10;
+			int min = -99;
 
 			int maxNum = min;
 
@@ -35,6 +35,7 @@ public class RandomArray extends HttpServlet {
 				resp.getWriter().println("</tr>");
 			}
 			resp.getWriter().println("</table>");
+			resp.getWriter().println("<p>Максимальный элемент: " + maxNum + "</p>");
 		} else if (req.getParameter("flag").equals("0")) {
 			resp.getWriter().println("");
 		}

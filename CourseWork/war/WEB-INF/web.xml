@@ -1,93 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	
 	<servlet>
 		<servlet-name>ClosestNumber</servlet-name>
-		<servlet-class>com.ClosestNumber</servlet-class>
+		<servlet-class>com.ClosestNumberServlet</servlet-class>
 	</servlet>
-	<servlet>
-		<servlet-name>QuadraticEquation</servlet-name>
-		<servlet-class>com.QuadraticEquation</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>RandomArray</servlet-name>
-		<servlet-class>com.RandomArray</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>RandomArrayMax</servlet-name>
-		<servlet-class>com.RandomArrayMax</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>UnicodeSymbols</servlet-name>
-		<servlet-class>com.UnicodeSymbols</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>UnicodeSymbolsExt</servlet-name>
-		<servlet-class>com.UnicodeSymbolsExt</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Booking</servlet-name>
-		<servlet-class>com.Booking</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>City</servlet-name>
-		<servlet-class>com.City</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Hotel</servlet-name>
-		<servlet-class>com.Hotel</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Room</servlet-name>
-		<servlet-class>com.Room</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Exceptions</servlet-name>
-		<servlet-class>com.Exceptions</servlet-class>
-	</servlet>
-	
 	<servlet-mapping>
 		<servlet-name>ClosestNumber</servlet-name>
 		<url-pattern>/ClosestNumber</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QuadraticEquation</servlet-name>
+		<servlet-class>com.QuadraticEquationServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>QuadraticEquation</servlet-name>
 		<url-pattern>/QuadraticEquation</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RandomArray</servlet-name>
+		<servlet-class>com.RandomArrayServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>RandomArray</servlet-name>
 		<url-pattern>/RandomArray</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RandomArrayMax</servlet-name>
+		<servlet-class>com.RandomArrayMaxServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>RandomArrayMax</servlet-name>
 		<url-pattern>/RandomArrayMax</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UnicodeSymbols</servlet-name>
+		<servlet-class>com.UnicodeSymbolsServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>UnicodeSymbols</servlet-name>
 		<url-pattern>/UnicodeSymbols</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UnicodeSymbolsPlus</servlet-name>
+		<servlet-class>com.UnicodeSymbolsPlusServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
-		<servlet-name>UnicodeSymbolsExt</servlet-name>
-		<url-pattern>/UnicodeSymbolsExt</url-pattern>
+		<servlet-name>UnicodeSymbolsPlus</servlet-name>
+		<url-pattern>/UnicodeSymbolsPlus</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Booking</servlet-name>
+		<servlet-class>com.BookingServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>Booking</servlet-name>
 		<url-pattern>/Booking</url-pattern>
 	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>City</servlet-name>
-		<url-pattern>/City</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Hotel</servlet-name>
-		<url-pattern>/Hotel</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Room</servlet-name>
-		<url-pattern>/Room</url-pattern>
-	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Exceptions</servlet-name>
+		<servlet-class>com.ExceptionsServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>Exceptions</servlet-name>
 		<url-pattern>/Exceptions</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>District</servlet-name>
+		<servlet-class>com.DistrictServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>District</servlet-name>
+		<url-pattern>/District</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowMap</servlet-name>
+		<servlet-class>com.ShowMapServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowMap</servlet-name>
+		<url-pattern>/ShowMap</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>
